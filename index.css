@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: steelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.container {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    padding: 5px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: col col col;
+    grid-template-columns: row row row;
+    grid-template-areas: 
+    'box1 box2 box3'
+    'box4 box5 box6'
+    'box7 box8 box9';
+    justify-content: evenly;
+    align-content: center;
+}
+
+.play-box {
+    background-color: tomato;
+    height: 160px;
+    width: 160px;
+    margin: 2px;
+    padding: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: #fefefe
+}
+
+#box1 {
+    grid-area: "box1";
+}
+#box2 {
+    grid-area: "box2";
+}
+#box3 {
+    grid-area: "box3";
+}
+#box4 {
+    grid-area: "box4";
+}
+#box5 {
+    grid-area: "box5";
+}
+#box6 {
+    grid-area: "box6";
+}
+#box7 {
+    grid-area: "box7";
+}
+#box8 {
+    grid-area: "box8";
+}
+#box9 {
+    grid-area: "box9";
+}
+
+.result {
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 150px;
+    padding: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-text {
+    text-align: center;
+    color: darkred;
+    margin-bottom: 20px;
+}
+
+#btn {
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    background-color: steelblue;
+    color: #fefefe;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+    border: none;
+}
+
+#btn:hover {
+    opacity: 0.8;
+}
